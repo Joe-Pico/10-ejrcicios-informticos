@@ -1,2 +1,2 @@
-# 10-ejrcicios-informticos
+# 500-ejrcicios-informticos
 miselania
