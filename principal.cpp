@@ -5,39 +5,31 @@
 Write your code in this editor and press "Run" button to compile and execute it.
 
 *******************************************************************************/
-Verificar si un número es primo>S
+
 #include <iostream>
 using namespace std;
 
+struct Empleado {
+    string nombre;
+    int edad;
+    float salario;
+};
+
+void mostrarEmpleado(Empleado e) {
+    cout << "Nombre: " << e.nombre << endl;
+    cout << "Edad: " << e.edad << endl;
+    cout << "Salario: $" << e.salario << endl;
+}
+
 int main() {
-    int numero;
-    bool esPrimo = true;
+    Empleado emp;
+    cout << "Ingrese nombre: ";
+    cin >> emp.nombre;
+    cout << "Ingrese edad: ";
+    cin >> emp.edad;
+    cout << "Ingrese salario: ";
+    cin >> emp.salario;
 
-    cout << "Ingrese un número entero positivo: ";
-    cin >> numero;
-
-    if (cin.fail() || numero <= 0) {
-        cout << "Entrada inválida. Por favor ingrese un número entero positivo." << endl;
-        return 1;
-    }
-
-    if (numero == 1) {
-        esPrimo = false;
-    } else {
-        for (int i = 2; i * i <= numero; ++i) {
-            if (numero % i == 0) {
-                esPrimo = false;
-                break;
-            }
-        }
-    }
-
-    if (esPrimo) {
-        cout << numero << " es un número primo." << endl;
-    } else {
-        cout << numero << " no es un número primo." << endl;
-    }
-
+    mostrarEmpleado(emp);
     return 0;
-    
-    }
+}
